@@ -25,7 +25,7 @@ module JasmineRails
 
       FileUtils.mkdir_p File.dirname(source_path)
       Rails.logger.debug "Compiling #{source} to #{source_path}"
-      File.open(source_path, 'w') {|f| f << content }
+      File.open(source_path, 'wb') {|f| f << content }
       "/assets/#{source}"
     end
 
